@@ -1,0 +1,55 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.video-gallery {
+  padding: 60px 0;
+}
+
+.gallery-item {
+  background-color: #f2f2f2;
+  transition: all linear .2s;
+  border: 1px solid #ddd;
+  margin-bottom: 24px;
+
+  .image {
+    overflow: hidden;
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      background-color: $white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 45px;
+      color: $themeColor;
+      font-size: 16px;
+    }
+
+    img {
+      transition: all linear .2s;
+    }
+  }
+
+  .text {
+    padding: 14px;
+    min-height: 116px;
+
+    h6 {
+      @include font(16px, 500);
+      color: $black;
+      line-height: 22px;
+    }
+  }
+
+  &:hover {
+    .image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

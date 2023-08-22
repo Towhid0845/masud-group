@@ -1,0 +1,273 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+// .team {
+//   padding-top: 80px;
+// }
+
+// .team-item {
+//   margin: 0 12px;
+//   box-shadow: 0px 0px 9px rgba(7, 36, 95, 0.1);
+//   background-color: $white;
+//   border-radius: 10px;
+
+//   .image {
+//     height: 370px;
+//     border-top-right-radius: 10px;
+//     border-top-left-radius: 10px;
+//     position: relative;
+
+//     img {
+//       height: 100%;
+//       object-fit: cover;
+//       object-position: center;
+//       border-top-right-radius: 10px;
+//       border-top-left-radius: 10px;
+//     }
+
+//     .icon {
+//       width: 45px;
+//       height: 45px;
+//       background-color: $themeColor;
+//       border-radius: 50%;
+//       text-align: center;
+//       line-height: 45px;
+//       color: $white;
+//       position: absolute;
+//       bottom: -23px;
+//       right: 40px;
+//       z-index: 9;
+//       cursor: pointer;
+//       transition: all linear .2s;
+
+//       &:hover {
+//         .fa-plus {
+//           transform: rotate(45deg);
+//         }
+//       }
+
+//       i {
+//         transition: all linear .2s;
+//       }
+
+//       &::before {
+//         width: 62px;
+//         height: 62px;
+//         background-color: rgba(237, 28, 36, 0.4);
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         content: "";
+//         border-radius: 50%;
+//         z-index: -1;
+//       }
+
+//       ul {
+//         position: absolute;
+//         right: 2px;
+//         bottom: 0;
+//         transition: all 0.5s ease 0s;
+//         visibility: hidden;
+//         opacity: 0;
+
+
+//         li {
+//           margin: 3px 0;
+
+//           a {
+//             width: 40px;
+//             height: 40px;
+//             background-color: $white;
+//             border-radius: 50%;
+//             text-align: center;
+//             line-height: 40px;
+//             color: $black;
+//             transition: all linear .2s;
+
+//             &:hover {
+//               background-color: $themeColor;
+//               color: $white;
+//             }
+//           }
+//         }
+//       }
+
+//       &:hover {
+//         ul {
+//           visibility: visible;
+//           opacity: 1;
+//           bottom: 58px;
+//         }
+//       }
+//     }
+//   }
+
+//   .text {
+//     padding: 24px;
+//     background-color: $white;
+//     border-bottom-right-radius: 10px;
+//     border-bottom-left-radius: 10px;
+//     transition: all linear .2s;
+
+//     h4 {
+//       @include font(26px, 600);
+//       padding-bottom: 5px;
+//       transition: all linear .2s;
+//       padding-top: 10px;
+//       text-transform: uppercase;
+//     }
+
+//     p {
+//       @include font(18px, 500);
+//       color: #7f8284;
+//       transition: all linear .2s
+//     }
+//   }
+
+//   &:hover {
+//     .image {
+//       .icon {
+//         background-color: $white;
+//         color: $themeColor;
+
+//         &::before {
+//           background-color: rgba(255, 255, 255, 0.4);
+//         }
+//       }
+//     }
+
+//     .text {
+//       background-color: $themeColor;
+
+//       h4,
+//       p {
+//         color: $white;
+//       }
+//     }
+//   }
+// }
+
+// .team-slider {
+//   .arrow {
+//     width: 60px;
+//     height: 60px;
+//     background-color: $white;
+//     border-radius: 50%;
+//     text-align: center;
+//     line-height: 60px;
+//     color: $themeColor;
+//     box-shadow: 0px 8px 20px rgba(7, 36, 95, 0.15);
+//     font-size: 20px;
+//     cursor: pointer;
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     z-index: 9;
+//     transition: all linear .2s;
+
+//     &:hover {
+//       background-color: $themeColor;
+//       color: $white;
+//     }
+//   }
+
+//   .left {
+//     left: -80px;
+//   }
+
+//   .right {
+//     right: -80px;
+//   }
+//   .slick-list{
+//     padding-bottom: 20px;
+//   }
+// }
+
+.team-part {
+  padding-top: 80px;
+  overflow: hidden;
+  background-color: #040404;
+
+  .team-bg {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 220px 0;
+
+    .text {
+      h3 {
+        @include font(32px, 700);
+        color: $white;
+      }
+
+      a {
+        @include font(18px, 400);
+        color: $themeColor;
+        padding: 8px 30px;
+        min-width: 120px;
+        background-color: $white;
+        border-radius: 3px;
+        margin-top: 24px;
+        transition: all linear .2s;
+
+        &:hover {
+          background-color: $themeColor;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.team-slider {
+  .arrow {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: $white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    transition: all linear .2s;
+  }
+
+  .left {
+    left: 40px;
+  }
+
+  .right {
+    right: 40px;
+  }
+
+  .slick-list {
+    padding-bottom: 20px;
+  }
+}
+
+// .team-bg {
+//   height: 543px;
+// }
+
+.team-bg h3 {
+  transform: translateY(-700px);
+  transition: all 1.5s ease;
+}
+
+.team-bg .view-all {
+  transform: translateY(700px);
+  transition: all 1.5s ease;
+}
+
+
+.team-bg.slick-active h3 {
+  transform: translateY(0);
+}
+
+.team-bg.slick-active .view-all {
+  transform: translateY(0);
+}

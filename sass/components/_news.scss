@@ -1,0 +1,144 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.news {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: left left !important;
+  margin-top: 52px;
+
+  .overlay {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  // video {
+  //   height: 950px;
+  //   width: 100%;
+  //   object-fit: cover;
+  // }
+
+  ul {
+    text-align: center;
+    margin-top: 24px;
+
+    li {
+      display: inline-block;
+
+      button {
+        font-size: 0;
+        width: 7px;
+        height: 7px;
+        background-color: #ddd;
+        border-radius: 50%;
+        margin: 0 3px;
+        border: 0;
+      }
+    }
+
+    li.slick-active {
+      button {
+        background-color: $black;
+      }
+    }
+  }
+}
+
+.news-item {
+  margin: 0 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  .news-image {
+    position: relative;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: 0;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 44, 66, 0.6);
+      transform: scaleX(0);
+      transition: all .5s ease 0s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        color: $white;
+        font-size: 5px;
+      }
+
+      i+i {
+        margin-left: 8px;
+      }
+    }
+    }
+
+  .news-text {
+    background-color: $white;
+
+    .info {
+      padding: 40px;
+      height: 254px;
+
+      .title {
+        @include font(24px, 600);
+        color: $black;
+        transition: all linear .2s;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        &:hover {
+          color: $themeColor;
+        }
+      }
+
+      p {
+        margin-top: 20px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .news-footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 15px 40px;
+
+      a {
+        @include font(15px, 500);
+        color: $black;
+        transition: all linear .2s;
+
+        &:hover {
+          color: $themeColor;
+        }
+      }
+
+      a+a {
+        margin-left: 30px;
+      }
+    }
+    }
+
+  &:hover {
+    .overlay {
+      transform: scaleX(1);
+    }
+  }
+}

@@ -1,0 +1,213 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.about {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f5f5f5;
+
+  .image {
+    position: relative;
+
+    .image-one {
+      max-width: 500px;
+      margin-left: auto;
+
+      .image-big {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .founded-box {
+        top: 40px;
+        left: -85px;
+
+        .icon {
+          // animation: up_down 1s infinite linear alternate;
+          width: 170px;
+          height: 170px;
+          background-color: $themeColor;
+          border-radius: 50%;
+          text-align: center;
+          padding: 24px;
+        }
+
+        img {
+          width: 60px;
+          margin-bottom: 8px
+        }
+
+        span {
+          @include font(20px, 700);
+          display: block;
+          color: $white;
+        }
+      }
+    }
+
+    .image-two {
+      // position: absolute;
+      // bottom: -137px;
+      // left: 0;
+      margin-top: -250px;
+      max-width: 496px;
+      border: 20px solid $white;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  .text {
+    margin-left: 30px;
+
+    p {
+      margin-top: 30px;
+      text-align: justify
+    }
+
+    h4 {
+      @include font(32px, 600);
+      color: $themeColor;
+      margin-top: 30px;
+      padding-right: 160px;
+    }
+
+    .call {
+      margin-top: 50px;
+      width: 100%;
+      background-color: $black;
+      padding: 40px 0;
+      position: relative;
+      padding-left: 190px;
+      padding-right: 30px;
+      height: 151px;
+
+      .icon-box {
+        color: $themeColor;
+        font-size: 62px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #001D2B;
+        width: 151px;
+        height: 151px;
+        text-align: center;
+        line-height: 151px;
+      }
+      .info {
+        span {
+          @include font(20px, 600);
+          color: #b1bec5;
+        }
+
+        h3 {
+          @include font(30px, 700);
+          color: $white;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes up_down {
+  0% {
+    transform: translateY(20px)
+  }
+
+  100% {
+    transform: translateY(-20px)
+  }
+}
+
+
+.anim-img {
+  position: absolute;
+}
+
+.anim-1 {
+  bottom: 50px;
+  left: 120px;
+}
+
+.anim-2 {
+  top: 300px;
+  right: 40px;
+}
+
+.anim-img {
+  animation: jumping 5s ease-in-out 2s infinite alternate;
+}
+
+.anim-2 {
+  animation: jumping2 5s ease-in-out 2s infinite alternate;
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(0px) translateX(0) rotate(0) scale(.5);
+    // opacity: .2;
+  }
+
+  50% {
+    transform: translateY(-50px) translateX(-50px) rotate(15deg) scale(.7);
+    // opacity: .7;
+  }
+
+  100% {
+    transform: translateY(-75px) translateX(-75px) rotate(0) scale(1);
+    // opacity: 1;
+  }
+}
+
+@keyframes jumping2 {
+  0% {
+    transform: translateY(-150px) translateX(-10px) rotate(0) scale(1);
+    // opacity: .2;
+  }
+
+  50% {
+    transform: translateY(-50px) translateX(-10px) rotate(5deg) scale(0.8);
+    // opacity: .5;
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0) rotate(0) scale(.7);
+  }
+}
+
+.vibrate {
+  animation: skew-y-shakeing 1s infinite linear;
+}
+
+
+@keyframes skew-y-shakeing {
+  0% {
+    transform: skewX(-25deg);
+  }
+
+  5% {
+    transform: skewX(25deg);
+  }
+
+  10% {
+    transform: skewX(-25deg);
+  }
+
+  15% {
+    transform: skewX(25deg);
+  }
+
+  20% {
+    transform: skewX(0deg);
+  }
+
+  100% {
+    transform: skewX(0deg);
+  }
+}

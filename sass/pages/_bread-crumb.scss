@@ -1,0 +1,63 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.bread-crumb {
+  width: 100%;
+  background-color: #bdbdbd;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+
+  .overlay {
+    padding-top: 160px;
+    padding-bottom: 60px;
+
+    .left {
+      h4 {
+        @include font(28px, 700);
+        color: $white;
+      }
+    }
+
+    .right {
+      ul {
+        li {
+          align-self: start;
+          @include font(16px, 600);
+          color: $white;
+          display: inline-block;
+          margin-left: 30px;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            top: 2px;
+            right: -18px;
+            width: 2px;
+            height: 19px;
+            content: "";
+            background-color: $white;
+            transform: rotate(21deg);
+          }
+
+          &:hover {
+            a {
+              color: $themeColor;
+            }
+          }
+
+          a {
+            color: $themeColor;
+            transition: all linear .2s;
+          }
+
+          &:last-child {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

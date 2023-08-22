@@ -1,0 +1,139 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+span {
+  display: inline-block;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  @include font(15px, 400);
+  color: $black;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+
+  .line {
+    width: 1px;
+    height: 100%;
+    // background-color: #ddd;
+    position: absolute;
+    left: 200px;
+    z-index: 9999;
+
+    &::before {
+      width: 2px;
+      height: 100px;
+      background-color: $themeColor;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      z-index: 9999;
+      animation: animate 20s linear infinite;
+    }
+
+    &::after {
+      width: 2px;
+      height: 100px;
+      background-color: $themeColor;
+      position: absolute;
+      top: 0;
+      left: 100px;
+      content: "";
+      z-index: 9999;
+      animation: animate2 21s linear infinite;
+    }
+
+    @keyframes animate {
+      0% {
+        top: -200px;
+      }
+
+      100% {
+        top: 100%;
+      }
+    }
+
+    @keyframes animate2 {
+      0% {
+        top: -200px;
+      }
+
+      100% {
+        top: 100%;
+      }
+    }
+  }
+}
+
+.common-btn {
+  a {
+    background-color: $themeColor;
+    @include font(16px, 600);
+    text-transform: uppercase;
+    padding: 18px 30px;
+    color: $white;
+    transition: all linear .2s;
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+
+.common-title {
+  margin-bottom: 50px;
+
+  span {
+    @include font(16px, 600);
+    text-transform: uppercase;
+    color: #7f8284;
+    letter-spacing: 3px;
+    border-bottom: 2px solid $themeColor;
+    padding-bottom: 4px;
+  }
+
+  h2 {
+    @include font(40px, 600);
+    padding-top: 10px;
+  }
+}

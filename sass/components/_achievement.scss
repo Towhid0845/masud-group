@@ -1,0 +1,66 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.company-achievement {
+  padding-top: 0px;
+
+  .achievement-bg {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-attachment: fixed;
+
+    .overlay {
+      background-color: rgba(237, 28, 36, 0.9);
+      padding: 60px 0;
+    }
+  }
+}
+
+
+.achievement-item {
+
+  i {
+    color: $white;
+    font-size: 42px
+  }
+
+  h3 {
+    color: $white;
+    @include font(42px, 600);
+    margin: 14px 0;
+  }
+
+  p {
+    color: $white;
+    @include font(22px, 600);
+  }
+}
+
+.achievement-item.odd-ach {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 49px;
+    right: -47px;
+    content: "";
+    width: 92px;
+    height: 34px;
+    background: url(../images/arrow-1.png);
+  }
+}
+
+.achievement-item.even-ach {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 51px;
+    right: -73px;
+    content: "";
+    width: 92px;
+    height: 34px;
+    background: url(../images/arrow-2.png);
+  }
+}

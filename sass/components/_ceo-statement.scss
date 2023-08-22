@@ -1,0 +1,49 @@
+.ceo-statement {
+  padding-top: 0;
+
+  .statement-bg {
+    background-color: #002C42;
+    padding: 80px 0;
+
+    .message-box {
+      background-color: $white;
+      padding: 24px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 219px;
+
+      .image {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 60px;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 50%;
+        }
+      }
+
+      .text {
+        margin-top: 50px;
+
+        h4 {
+          @include font(22px, 600);
+          padding-top: 10px
+        }
+
+        span {
+          @include font(18px, 400);
+          padding: 10px 0 20px 0;
+        }
+
+        p {
+          text-align: justify;
+        }
+      }
+
+    }
+  }
+}
