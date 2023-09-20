@@ -1800,11 +1800,11 @@ footer .footer-bg {
 .content-box p:first-child {
   margin-top: 30px; }
 
-.list-of-company ul li {
+ul li {
   list-style: none;
   margin-left: 40px;
   font-weight: bold; }
-  .list-of-company ul li::before {
+  ul li::before {
     font-family: "Font Awesome 5 Free";
     content: "\f058";
     color: #ED1C24;
@@ -1814,18 +1814,18 @@ footer .footer-bg {
     font-weight: 900;
     font-size: 20px; }
 
-.mid-text {
+blockquote {
   margin: 30px 0;
   padding: 20px 80px 20px 40px;
   background-color: #ffffff;
   border-bottom: 3px solid #ED1C24;
   position: relative; }
-  .mid-text h4 {
+  blockquote h4 {
     font-size: 24px;
     font-weight: 600;
     color: #666666;
     line-height: 40px; }
-    .mid-text h4::before {
+    blockquote h4::before {
       font-family: "Font Awesome 5 Free";
       content: "\f10d";
       color: #ED1C24;
@@ -1833,12 +1833,12 @@ footer .footer-bg {
       padding-right: 30px;
       font-size: 30px; }
 
-.core-value {
+table {
   margin-left: 40px; }
-  .core-value tr th {
+  table tr th {
     min-width: 150px;
     text-align: end; }
-  .core-value tr td {
+  table tr td {
     padding-left: 20px; }
 
 .note {
